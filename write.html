@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>글 작성하기</h1>
+    <input id="title" placeholder="제목" />
+    <select id="category">
+      <option value="free">자유게시판</option>
+      <option value="notice">공지사항</option>
+      <option value="qna">Q&A</option>
+    </select>
+    <textarea id="content" placeholder="내용"></textarea>
+    <button onclick="submitPost()">등록</button>
+    <a href="index.html">뒤로가기</a>
+
+    <script>
+      function submitPost() {
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+        const category = document.getElementById('category').value;
+
+        if (!title || !content) {
+          alert('제목과 내용을 입력해주세요.');
+          return;
+        }
+
+        const posts = JSON.parse(localStorage.getItem(category)) || [];
+        posts.push({ title, content, date: new Date().toLocaleString() });
+        localStorage.setItem(category, JSON.stringify(posts));
+
+        window.location.href = 'index.html';
+      }
+    </script>
+  </body>
+</html>

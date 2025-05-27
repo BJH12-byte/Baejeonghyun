@@ -1,0 +1,178 @@
+/* 전체 배경과 폰트 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* 컨테이너 박스 */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* 제목 */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* 카테고리 버튼 그룹 */
+.category-buttons {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* 카테고리 버튼 공통 스타일 */
+.category-buttons button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  margin: 0 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.category-buttons button:hover {
+  background-color: #2980b9;
+}
+
+/* 글 목록 */
+#post-list h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+#posts {
+  list-style: none;
+  padding: 0;
+}
+
+#posts li {
+  background: #ecf0f1;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* 제목 굵게 */
+#posts strong {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* 날짜 스타일 */
+#posts small {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+/* 삭제 버튼 스타일 */
+#posts button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#posts button:hover {
+  background-color: #c0392b;
+}
+
+/* 글쓰기 + 버튼 (고정 위치) */
+#addBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+#addBtn:hover {
+  background-color: #1e8449;
+}
+
+/* 글쓰기 페이지 스타일도 조금 적용 */
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
